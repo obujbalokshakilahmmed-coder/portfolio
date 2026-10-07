@@ -1,26 +1,9 @@
-const path = require('path')
- 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // এটি আপনার Next.js অ্যাপটিকে স্ট্যাটিক এইচটিএমএলে রূপান্তর করবে ভাই
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'media.dev.to',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'media2.dev.to',
-        pathname: '**',
-      },
-    ],
+    unoptimized: true, // গিটহাবে আপনার ছবিগুলোকে ক্র্যাশ হওয়া থেকে রক্ষা করবে ভাই
   },
-}
+};
+
+module.exports = nextConfig;
