@@ -26,9 +26,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: npm ci
+        run: run: npm install
       - name: Build with Next.js
-        run: npm run build
+        run: run: npx next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
